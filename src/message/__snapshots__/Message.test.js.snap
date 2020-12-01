@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message Component renders the UI as expected 1`] = `
+<div
+  className="chat-message"
+>
+  <img
+    className="chat-avatar"
+    src="https://robohash.org/utlaborumfugit.jpg?size=200x200&set=set1"
+  />
+  <p>
+    my name
+  </p>
+  <p>
+    10:47
+  </p>
+  <p>
+    hello
+  </p>
+</div>
+`;

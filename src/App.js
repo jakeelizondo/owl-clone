@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
+import ChatLog from './chat-log/ChatLog.js';
+import ParticipantLog from './participant-log/ParticipantLog.js';
+import Stage from './stage/Stage.js';
 import './App.css';
+import participants from './participants';
+import chatEvents from './chatEvents';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="main-window">
+      <div className="chatlog">
+        <ChatLog chatEvents={chatEvents} participants={participants} />
+      </div>
+      <div className="participation-log">
+        <ParticipantLog participants={participants} />
+      </div>
+      <div className="stage">
+        <Stage participants={participants} />
+      </div>
+    </main>
   );
 }
 
